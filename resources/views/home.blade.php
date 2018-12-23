@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Questions</div>
-                    <a class="btn btn-primary float-right" href="#">
+                    <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                         Create a Question
                     </a>
 
@@ -21,7 +21,7 @@
                                             <small class="text-muted">
                                                 Updated: {{ $question->created_at->diffForHumans() }}
                                                 Answers: {{ $question->answer()->count() }}
-                                                Comments: {{ $question->comments()->count() }}
+
                                             </small>
                                         </div>
                                         <div class="card-body">
